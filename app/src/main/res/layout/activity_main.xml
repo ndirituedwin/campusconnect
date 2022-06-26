@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+     android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+    android:background="@color/purple_700"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+       <androidx.appcompat.widget.Toolbar
+           android:id="@+id/toolbar"
+           app:title="Kampus Konekt"
+           app:titleTextColor="@color/white"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+            />
+    </com.google.android.material.appbar.AppBarLayout>
+   <com.google.android.material.tabs.TabLayout
+       android:id="@+id/tab_layout"
+       android:layout_width="match_parent"
+       app:tabGravity="fill"
+       android:layout_below="@+id/appbarlayout"
+       app:tabIndicator="@color/purple_500"
+       app:tabIndicatorHeight="4dp"
+       app:tabBackground="@color/purple_700"
+       app:tabSelectedTextColor="@color/white"
+       app:tabIndicatorColor="@color/white"
+       app:tabTextColor="@color/white"
+       android:layout_height="wrap_content">
+
+
+   </com.google.android.material.tabs.TabLayout>
+   <androidx.viewpager.widget.ViewPager
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/view_pager"
+       android:visibility="visible"
+       android:layout_below="@+id/tab_layout"
+       app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/floatingactionbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="2dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:tint="@color/teal_700"
+
+            android:layout_alignParentRight="true"
+            android:src="@android:drawable/stat_notify_chat"
+            />
+
+</RelativeLayout>
+</layout>
